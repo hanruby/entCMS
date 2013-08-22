@@ -1,0 +1,90 @@
+﻿
+                    <dl class="one">
+                        <dt><a href="/global/" title=""><%=webPage.Resources["Home"]%></a></dt>
+                    </dl>
+                    <dl class="one">
+                        <dt><a href="/sch/OUR_COMPANY/OurCompany.jsp">公司概览</a></dt>
+                        <dd class="menudd">
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_COMPANY/About_Us/About Us.jsp"><strong>关于我们</strong></a></li>
+                                <li><a href="/sch/OUR_COMPANY/About_Us/philosophy/philosophy.jsp">经营哲学</a></li>
+                                <li><a href="/sch/OUR_COMPANY/About_Us/fastfact/fastfact.jsp">基本资料</a></li>
+                                <li><a href="/sch/OUR_COMPANY/About_Us/awards/awards.jsp">奖项及嘉许</a></li>
+                                <li><a href="/sch/OUR_COMPANY/About_Us/qualityaccreditaions/qualityaccreditaions.jsp">质量认证</a></li>
+                                <li><a href="/sch/OUR_COMPANY/About_Us/responsibility/responsibility.jsp">社会责任</a></li>
+                            </ul>
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_COMPANY/Careers/careers.jsp"><strong>加入我们</strong></a></li>
+                                <li><a href="/sch/OUR_COMPANY/Careers/workingatkl/workingatkl.jsp">嘉里物流精英荟萃</a></li>
+                                <li><a href="/sch/OUR_COMPANY/Careers/managmenttrainee/index.jsp">管理见习生计划</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="one">
+                        <dt><a class="" href="/sch/OUR_EXPERTISE/ourexpertise.jsp">专业才能</a></dt>
+                        <dd class="menudd">
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_EXPERTISE/IntegratedLogistics/integratedlogistics.jsp"><strong>
+                                    综合物流</strong></a></li><li><a href="/sch/OUR_EXPERTISE/IntegratedLogistics/WarehousingDistribution/warehousingdistribution.jsp">
+                                        仓储及配送</a></li><li><a href="/sch/OUR_EXPERTISE/IntegratedLogistics/roadfreight/roadfreight.jsp">
+                                            陆运</a></li><li><a href="/sch/OUR_EXPERTISE/IntegratedLogistics/terminallogistics/terminallogistics.jsp">
+                                                码头物流</a></li><li><a href="/sch/OUR_EXPERTISE/IntegratedLogistics/busioutsource/busioutsource.jsp">
+                                                    企业方案</a></li></ul>
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_EXPERTISE/InternationalFreightForward/iff.jsp"><strong>国际货代</strong></a></li><li>
+                                    <a href="/sch/OUR_EXPERTISE/InternationalFreightForward/airfreight/airfreight.jsp">空运</a></li><li>
+                                        <a href="/sch/OUR_EXPERTISE/InternationalFreightForward/oceanfreight/oceanfreight.jsp">
+                                            海运</a></li><li><a href="/sch/OUR_EXPERTISE/InternationalFreightForward/roadrailfreight/roadnrailfreight.jsp">
+                                                公路及铁路货运</a></li><li><a href="/sch/OUR_EXPERTISE/InternationalFreightForward/customsbrokerage/customsbrokerage.jsp">
+                                                    报关代理</a></li><li><a href="/sch/OUR_EXPERTISE/InternationalFreightForward/insurancebrokerage/insurancebrokerage.jsp">
+                                                        货运保险顾问</a></li><li><a href="/sch/OUR_EXPERTISE/InternationalFreightForward/globalsecurityproduct/globalsecurityproduct.jsp">
+                                                            环球安全货运</a></li><li><a href="/sch/OUR_EXPERTISE/InternationalFreightForward/riskmanagement/riskmanagement.jsp">
+                                                                风险管理顾问</a></li></ul>
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_EXPERTISE/Express/express.jsp"><strong>速递服务</strong></a></li><li>
+                                    <a href="/sch/OUR_EXPERTISE/Express/InternationalExpress/internationalexpress.jsp">国际速递服务</a></li><li>
+                                        <a href="/sch/OUR_EXPERTISE/Express/DomesticExpress/domasticexpress.jsp">本地速递服务</a></li><li>
+                                            <a href="#"></a></li>
+                            </ul>
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_EXPERTISE/SupplyChainSolutions/supplychainsolutions.jsp"><strong>
+                                    供应链解决方案</strong></a></li><li><a href="/sch/OUR_EXPERTISE/SupplyChainSolutions/regionaldistribcentre/regionaldistribcentre.jsp">
+                                        区域配送中心</a></li><li><a href="/sch/OUR_EXPERTISE/SupplyChainSolutions/povendormanage/povendormanage.jsp">
+                                            订单与供应商管理</a></li><li><a href="/sch/OUR_EXPERTISE/SupplyChainSolutions/returnmatauthorisation/returnmatauthorisation.jsp">
+                                                退货授权</a></li><li><a href="/sch/OUR_EXPERTISE/SupplyChainSolutions/eventmanage/eventmanage.jsp">
+                                                    项目管理</a></li><li><a href="/sch/OUR_EXPERTISE/SupplyChainSolutions/virtualbuyingoffice/virtualbuyingoffice.jsp">
+                                                        虚拟采购办公室</a></li></ul>
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_EXPERTISE/IndustrySolutions/industrysolutions.jsp"><strong>行业解决方案</strong></a></li><li>
+                                    <a href="/sch/OUR_EXPERTISE/IndustrySolutions/fashionlifestyle/fashionlifestyle.jsp">
+                                        时尚服饰及精品</a></li><li><a href="/sch/OUR_EXPERTISE/IndustrySolutions/electronicstechnology/electronicstechnology.jsp">
+                                            电子科技</a></li><li><a href="/sch/OUR_EXPERTISE/IndustrySolutions/foodbeverage/foodbeverage.jsp">
+                                                食品及饮料</a></li><li><a href="/sch/OUR_EXPERTISE/IndustrySolutions/fmcg/fmcg.jsp">快消品</a></li><li>
+                                                    <a href="/sch/OUR_EXPERTISE/IndustrySolutions/industrialmatsci/industrialmatsci.jsp">
+                                                        工业及物料科技</a></li><li><a href="/sch/OUR_EXPERTISE/IndustrySolutions/automotive/automotive.jsp">
+                                                            汽车</a></li><li><a href="/sch/OUR_EXPERTISE/IndustrySolutions/pharmaceuhealth/pharmaceuhealth.jsp">
+                                                                医药</a></li></ul>
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_EXPERTISE/FoodFMCGTrading/fbtrading.jsp"><strong>餐饮贸易</strong></a></li><li>
+                                    <a href="/sch/OUR_EXPERTISE/FoodFMCGTrading/fmcgtradingdistribution/fmcgtradingdistribution.jsp">
+                                        快消品贸易与配送</a></li><li><a href="/sch/OUR_EXPERTISE/FoodFMCGTrading/foodservicing/foodservicing.jsp">
+                                            餐饮服务</a></li><li><a href="/sch/OUR_EXPERTISE/FoodFMCGTrading/foodcatering/foodcatering.jsp">
+                                                配餐服务</a></li></ul>
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_EXPERTISE/ISOTankSolutions/isotanksolutions.jsp"><strong>国际标准罐式集装箱</strong></a></li><li>
+                                    <a href="/sch/OUR_EXPERTISE/ISOTankSolutions/cleaningrepair/cleaningrepair.jsp">清洁及维修</a></li><li>
+                                        <a href="/sch/OUR_EXPERTISE/ISOTankSolutions/tradingsparepartssupply/tradingsparepartssupply.jsp">
+                                            OEM 铸件及罐式货柜贸易</a></li></ul>
+                        </dd>
+                    </dl>
+                    <dl class="one">
+                        <dt><a class="" href="/sch/OUR_NETWORK/index.jsp">环球网络</a></dt>
+                        <dd class="menudd">
+                            <ul class="fixed">
+                                <li><a href="/sch/OUR_COMPANY/Press/press.jsp"><strong>新闻发布</strong></a></li>
+                                <li><a href="/sch/OUR_COMPANY/Press/pressrelease/indexlist.jsp">新闻稿</a></li>
+                                <li><a href="/sch/OUR_COMPANY/Press/publications/publications.jsp">刊物</a></li>
+                                <li><a href="/sch/OUR_COMPANY/Press/imagegallery/imagegallery.jsp">图库</a></li>
+                            </ul>
+                        </dd>
+                    </dl>

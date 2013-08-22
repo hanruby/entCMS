@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F0A20BB-1A8D-4B46-9344-86582DFF20C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>entCMS.Services</RootNamespace>
+    <AssemblyName>entCMS.Services</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hxj.Data, Version=1.7.4.4, Culture=neutral, PublicKeyToken=1e3d114103589781, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Hxj.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseService.cs" />
+    <Compile Include="CompanyService.cs" />
+    <Compile Include="DBSession.cs" />
+    <Compile Include="FeedbackService.cs" />
+    <Compile Include="JobService.cs" />
+    <Compile Include="LanguageService.cs" />
+    <Compile Include="LinkService.cs" />
+    <Compile Include="LinkGroupService.cs" />
+    <Compile Include="LogService.cs" />
+    <Compile Include="MenuService.cs" />
+    <Compile Include="ModuleService.cs" />
+    <Compile Include="NewsCatalogService.cs" />
+    <Compile Include="NewsHitService.cs" />
+    <Compile Include="NewsService.cs" />
+    <Compile Include="NewsTopicRelService.cs" />
+    <Compile Include="NewsTopicService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurviewService.cs" />
+    <Compile Include="RolePurviewService.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="SlideshowService.cs" />
+    <Compile Include="UserMapService.cs" />
+    <Compile Include="UserPurviewService.cs" />
+    <Compile Include="UserRoleService.cs" />
+    <Compile Include="UserService.cs" />
+    <Compile Include="AdService.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="ServicerService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\entCMS.Common\entCMS.Common.csproj">
+      <Project>{76AFF48A-6533-4FD7-AA06-0534FC10363F}</Project>
+      <Name>entCMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entCMS.Models\entCMS.Models.csproj">
+      <Project>{3FB5785C-7283-4D75-97DA-40D9A758CFDB}</Project>
+      <Name>entCMS.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

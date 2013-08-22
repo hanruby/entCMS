@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/cn/Site.Master" AutoEventWireup="true" CodeBehind="Inside.master.cs" Inherits="entCMS.HengyiLogisticsWeb.cn.Inside" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
+<div id="insidebanner"><asp:Literal ID="ltlBanner" runat="server"></asp:Literal></div>
+<div class="clearfix box">
+    <div class="container_12 clearfix">
+        <div id="insidemain" class="fixed">
+            <div class="sidebar">                                                                                                                                                                                                                                            <div class="sidemenu">
+                <script type="text/javascript">$(document).ready(function () { highlight(1, 0, 0, 1); });</script>
+                <a href="/eng/OUR_COMPANY/About_Us/About Us.jsp " class="flip on active" id="flip_1"
+                    onclick="javascript:highlight(1);">About Us</a>
+                <ul id="panel_1" class="panel" style="display: block; background: none repeat scroll 0% 0% rgb(252, 134, 62);">
+                    <li><a onclick="javascript:panelsub(1,1);" href="/eng/OUR_COMPANY/About_Us/philosophy/philosophy.jsp"
+                        class="panel_11">Philosophy</a></li>
+                    <li class="panelsubmenu" id="panelsubmenu_11"><a href="/eng/OUR_COMPANY/About_Us/philosophy/ourvision/ourvision.jsp"
+                        class="panelsub_111">Our Vision</a> <a href="/eng/OUR_COMPANY/About_Us/philosophy/ourlogo/ourlogo.jsp"
+                            class="panelsub_112">Our Logo</a> </li>
+                    <li><a href="/eng/OUR_COMPANY/About_Us/fastfact/fastfact.jsp" class="panel_13">Fast
+                        Facts</a></li>
+                    <li><a href="/eng/OUR_COMPANY/About_Us/awards/awards.jsp" class="panel_14">Awards</a></li>
+                    <li><a href="/eng/OUR_COMPANY/About_Us/qualityaccreditaions/qualityaccreditaions.jsp"
+                        class="panel_15">Quality Accreditations</a></li>
+                    <li><a onclick="javascript:panelsub(1,6);" href="/eng/OUR_COMPANY/About_Us/responsibility/responsibility.jsp"
+                        class="panel_16">Responsibility</a></li>
+                    <li class="panelsubmenu" id="panelsubmenu_16"><a href="/eng/OUR_COMPANY/About_Us/responsibility/environment/environment.jsp"
+                        class="panelsub_161">Environment</a> <a href="/eng/OUR_COMPANY/About_Us/responsibility/society/society.jsp"
+                            class="panelsub_162">Society</a> <a href="/eng/OUR_COMPANY/About_Us/responsibility/community/community.jsp"
+                                class="panelsub_163">Community</a> <a href="/eng/OUR_COMPANY/About_Us/responsibility/employees/employees.jsp"
+                                    class="panelsub_164">Employees</a> </li>
+                </ul>
+                <a href="/eng/OUR_COMPANY/Careers/careers.jsp " class="flip" id="flip_2" onclick="javascript:highlight(2);">
+                    Career</a>
+                <ul id="panel_2" class="panel" style="display: none;">
+                    <li><a onclick="javascript:panelsub(2,1);" href="/eng/OUR_COMPANY/Careers/workingatkl/workingatkl.jsp"
+                        class="panel_21">Working at Kerry Logistics</a></li>
+                    <li class="panelsubmenu" id="panelsubmenu_21"><a href="/eng/OUR_COMPANY/Careers/workingatkl/ourcompany/ourcompany.jsp"
+                        class="panelsub_211">Our Company</a> <a href="/eng/OUR_COMPANY/Careers/workingatkl/ourphilosophy/ourphilosophy.jsp"
+                            class="panelsub_212">Our Philosophy</a> <a href="/eng/OUR_COMPANY/Careers/workingatkl/ourpeople/ourpeople.jsp"
+                                class="panelsub_213">Our People</a> </li>
+                    <li><a href="/eng/OUR_COMPANY/Careers/managmenttrainee/index.jsp" class="panel_22">Management
+                        Trainee</a></li>
+                </ul>
+                <a href="/eng/OUR_COMPANY/Press/press.jsp " class="flip" id="flip_3" onclick="javascript:highlight(3);">
+                    Press</a>
+                <ul id="panel_3" class="panel" style="display: none;">
+                    <li><a href="/eng/OUR_COMPANY/Press/pressrelease/indexlist.jsp" class="panel_31">Press
+                        Release</a></li>
+                    <li><a onclick="javascript:panelsub(3,2);" href="/eng/OUR_COMPANY/Press/publications/publications.jsp"
+                        class="panel_32">Publications</a></li>
+                    <li class="panelsubmenu" id="panelsubmenu_32"><a href="/eng/OUR_COMPANY/Press/publications/klfocus/klfocus.jsp"
+                        class="panelsub_321">Kerry Logistics FOCUS</a> <a href="/eng/OUR_COMPANY/Press/publications/corpbrochure/corpbrochure.jsp"
+                            class="panelsub_322">Corporate Brochure</a> <a href="/eng/OUR_COMPANY/Press/publications/industrysolutionsflyers/industrysolutionsflyers.jsp"
+                                class="panelsub_323">Industry Solutions Flyers</a> <a href="/eng/OUR_COMPANY/Press/publications/serviceflyers/serviceflyers.jsp"
+                                    class="panelsub_324">Service Flyers</a> <a href="/eng/OUR_COMPANY/Press/publications/countryflyers/countryflyers.jsp"
+                                        class="panelsub_325">Country Flyers</a> </li>
+                    <li><a onclick="javascript:panelsub(3,3);" href="/eng/OUR_COMPANY/Press/imagegallery/imagegallery.jsp"
+                        class="panel_33">Image Gallery</a></li>
+                    <li class="panelsubmenu" id="panelsubmenu_33"><a href="/eng/OUR_COMPANY/Press/imagegallery/logo/logo.jsp"
+                        class="panelsub_331">Logo</a> <a href="/eng/OUR_COMPANY/Press/imagegallery/photos/photos.jsp"
+                            class="panelsub_332">Photos</a> <a href="/eng/OUR_COMPANY/Press/imagegallery/videos/videos.jsp"
+                                class="panelsub_333">Videos</a> </li>
+                </ul>
+            </div>
+            </div>
+            <div class="insideright">
+                <span class="BreadcrumbNav">当前位置：
+                    <asp:ContentPlaceHolder ID="cphNav" runat="server"></asp:ContentPlaceHolder>
+                </span>
+                <div class="content">
+                    <h1 class="contenttitle">
+                        <asp:ContentPlaceHolder ID="cphTitle" runat="server"></asp:ContentPlaceHolder>
+                    </h1>
+                    <h2 class="subtitle">
+                        <asp:ContentPlaceHolder ID="cphSubTitle" runat="server"></asp:ContentPlaceHolder>
+                    </h2>
+                    <asp:ContentPlaceHolder ID="cphContent" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="contentbar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphFoot" runat="server">
+    <asp:ContentPlaceHolder ID="cphFoot" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

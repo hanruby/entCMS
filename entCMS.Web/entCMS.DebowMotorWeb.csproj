@@ -1,0 +1,987 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8900D28-D170-4D21-AA28-30D8FACC4CB4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>entCMS.Web</RootNamespace>
+    <AssemblyName>entCMS.Web</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Hxj.Data, Version=1.7.4.4, Culture=neutral, PublicKeyToken=1e3d114103589781, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Hxj.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Hxj.Data.Sqlite, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b2dc8002b4dd1df9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Libs\Hxj.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Intelligencia.UrlRewriter, Version=2.0.0.6, Culture=neutral, PublicKeyToken=0573f3650687980d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\entCMS.Manage\bin\Intelligencia.UrlRewriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\counter.txt" />
+    <Content Include="cn\css\global.css" />
+    <Content Include="cn\css\lib.css" />
+    <Content Include="cn\css\style.css" />
+    <Content Include="cn\ImageList.aspx" />
+    <Content Include="cn\ImageShow.aspx" />
+    <Content Include="cn\images\1ffdc090b3.jpg" />
+    <Content Include="cn\images\banner_in.jpg" />
+    <Content Include="cn\images\contact.jpg" />
+    <Content Include="cn\images\contact2.jpg" />
+    <Content Include="cn\images\contents_bg.gif" />
+    <Content Include="cn\images\dot.jpg" />
+    <Content Include="cn\images\dot2.jpg" />
+    <Content Include="cn\images\glass.png" />
+    <Content Include="cn\images\hover.jpg" />
+    <Content Include="cn\images\icon.gif" />
+    <Content Include="cn\images\icon.jpg" />
+    <Content Include="cn\images\input_bg.gif" />
+    <Content Include="cn\images\inqulry.jpg" />
+    <Content Include="cn\images\left.jpg" />
+    <Content Include="cn\images\line.jpg" />
+    <Content Include="cn\images\logo.png" />
+    <Content Include="cn\images\logo2.png" />
+    <Content Include="cn\images\logo3.png" />
+    <Content Include="cn\images\logo_left.jpg" />
+    <Content Include="cn\images\mainbg1.jpg" />
+    <Content Include="cn\images\more.jpg" />
+    <Content Include="cn\images\nav_l.png" />
+    <Content Include="cn\images\nav_m.jpg" />
+    <Content Include="cn\images\nav_r.png" />
+    <Content Include="cn\images\products_list.jpg" />
+    <Content Include="cn\images\pro_bg.jpg" />
+    <Content Include="cn\images\right.jpg" />
+    <Content Include="cn\images\search.jpg" />
+    <Content Include="cn\Index.aspx" />
+    <Content Include="cn\Inquiry.aspx" />
+    <Content Include="cn\JobList.aspx" />
+    <Content Include="cn\JobShow.aspx" />
+    <Content Include="cn\js\checkform.js" />
+    <Content Include="cn\NewsList.aspx" />
+    <Content Include="cn\NewsShow.aspx" />
+    <Content Include="cn\Page.aspx" />
+    <Content Include="cn\ProductList.aspx" />
+    <Content Include="cn\ProductShow.aspx" />
+    <Content Include="cn\Search.aspx" />
+    <Content Include="cn\Sitemap.aspx" />
+    <Content Include="en\banner\banner_1.jpg" />
+    <Content Include="en\banner\banner_2.jpg" />
+    <Content Include="en\banner\banner_3.jpg" />
+    <Content Include="en\banner\banner_4.jpg" />
+    <Content Include="en\css\lib.css" />
+    <Content Include="en\css\site.css" />
+    <Content Include="en\ImageList.aspx" />
+    <Content Include="en\ImageShow.aspx" />
+    <Content Include="en\images\arr.gif" />
+    <Content Include="en\images\bannerbj.jpg" />
+    <Content Include="en\images\bg.jpg" />
+    <Content Include="en\images\box_bottom.jpg" />
+    <Content Include="en\images\btn_search.gif" />
+    <Content Include="en\images\contents_bg.gif" />
+    <Content Include="en\images\down_arrow.gif" />
+    <Content Include="en\images\flash01.swf" />
+    <Content Include="en\images\footbj.jpg" />
+    <Content Include="en\images\icon1.jpg" />
+    <Content Include="en\images\icon3.jpg" />
+    <Content Include="en\images\index_banner.jpg" />
+    <Content Include="en\images\index_bannerbg.jpg" />
+    <Content Include="en\images\input_bg.gif" />
+    <Content Include="en\images\left1.jpg" />
+    <Content Include="en\images\left2.jpg" />
+    <Content Include="en\images\left3.jpg" />
+    <Content Include="en\images\left4.jpg" />
+    <Content Include="en\images\left5.jpg" />
+    <Content Include="en\images\left_li.jpg" />
+    <Content Include="en\images\left_li_hover.jpg" />
+    <Content Include="en\images\logo.gif" />
+    <Content Include="en\images\logo.jpg" />
+    <Content Include="en\images\logo.png" />
+    <Content Include="en\images\med.jpg" />
+    <Content Include="en\images\med2.jpg" />
+    <Content Include="en\images\med3-23.jpg" />
+    <Content Include="en\images\med3.jpg" />
+    <Content Include="en\images\menu.jpg" />
+    <Content Include="en\images\menu1.jpg" />
+    <Content Include="en\images\menubj.jpg" />
+    <Content Include="en\images\more.jpg" />
+    <Content Include="en\images\right.jpg" />
+    <Content Include="en\images\right1.jpg" />
+    <Content Include="en\images\right2.jpg" />
+    <Content Include="en\images\topbj.jpg" />
+    <Content Include="en\Index.aspx" />
+    <Content Include="en\Inquiry.aspx" />
+    <Content Include="en\js\banner.js" />
+    <Content Include="en\js\checkform.js" />
+    <Content Include="en\NewsList.aspx" />
+    <Content Include="en\NewsShow.aspx" />
+    <Content Include="en\Page.aspx" />
+    <Content Include="en\ProductList.aspx" />
+    <Content Include="en\ProductShow.aspx" />
+    <Content Include="en\Search.aspx" />
+    <Content Include="en\Sitemap.aspx" />
+    <None Include="App_Data\entCMS_V1.s3db" />
+    <Content Include="Error.aspx" />
+    <Content Include="ie6fix\blank.gif" />
+    <Content Include="ie6fix\csshover.htc" />
+    <Content Include="ie6fix\iepngfix.htc" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\flags\zh-cn.gif" />
+    <Content Include="Images\flags\jp.gif" />
+    <Content Include="Images\flags\en.gif" />
+    <Content Include="Files\readme.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Manage\Css\frame.CSS" />
+    <Content Include="Manage\Css\main.css" />
+    <Content Include="Manage\Css\online.css" />
+    <Content Include="Manage\Default.aspx" />
+    <Content Include="Manage\Extend.aspx" />
+    <Content Include="Manage\Frame\Bottom.aspx" />
+    <Content Include="Manage\Frame\Left.aspx" />
+    <Content Include="Manage\Frame\Main.aspx" />
+    <Content Include="Manage\Frame\Top.aspx" />
+    <Content Include="Manage\Images\360.jpg" />
+    <Content Include="Manage\Images\alibaba\alibaba_1.jpg" />
+    <Content Include="Manage\Images\alibaba\alibaba_101.jpg" />
+    <Content Include="Manage\Images\alibaba\alibaba_102.jpg" />
+    <Content Include="Manage\Images\alibaba\alibaba_2.jpg" />
+    <Content Include="Manage\Images\baidu.jpg" />
+    <Content Include="Manage\Images\bing.jpg" />
+    <Content Include="Manage\Images\buttons\btn-bg-01.gif" />
+    <Content Include="Manage\Images\buttons\btn-bg-02.gif" />
+    <Content Include="Manage\Images\buttons\btn-bg.gif" />
+    <Content Include="Manage\Images\buttons\btn-bg22.gif" />
+    <Content Include="Manage\Images\buttons\button.gif" />
+    <Content Include="Manage\Images\buttons\b_blue1.gif" />
+    <Content Include="Manage\Images\buttons\b_blue2.gif" />
+    <Content Include="Manage\Images\close.png" />
+    <Content Include="Manage\Images\fancyzoom\bl.png" />
+    <Content Include="Manage\Images\fancyzoom\blank.gif" />
+    <Content Include="Manage\Images\fancyzoom\bm.png" />
+    <Content Include="Manage\Images\fancyzoom\br.png" />
+    <Content Include="Manage\Images\fancyzoom\closebox.png" />
+    <Content Include="Manage\Images\fancyzoom\ml.png" />
+    <Content Include="Manage\Images\fancyzoom\mr.png" />
+    <Content Include="Manage\Images\fancyzoom\tl.png" />
+    <Content Include="Manage\Images\fancyzoom\tm.png" />
+    <Content Include="Manage\Images\fancyzoom\tr.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-caption-fill.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-caption-l.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-caption-r.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-1.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-10.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-11.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-12.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-2.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-3.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-4.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-5.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-6.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-7.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-8.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom-spin-9.png" />
+    <Content Include="Manage\Images\fancyzoom\zoom.png" />
+    <Content Include="Manage\Images\frame\bg-nav.jpg" />
+    <Content Include="Manage\Images\frame\bg.gif" />
+    <Content Include="Manage\Images\frame\bullet.gif" />
+    <Content Include="Manage\Images\frame\bullet1.gif" />
+    <Content Include="Manage\Images\frame\kslbg.gif" />
+    <Content Include="Manage\Images\frame\leftbg.gif" />
+    <Content Include="Manage\Images\frame\nselect.gif" />
+    <Content Include="Manage\Images\frame\select.gif" />
+    <Content Include="Manage\Images\frame\Selected.jpg" />
+    <Content Include="Manage\Images\frame\Selectedh.jpg" />
+    <Content Include="Manage\Images\frame\Selectedhover.jpg" />
+    <Content Include="Manage\Images\frame\tbg.jpg" />
+    <Content Include="Manage\Images\gif-0760.gif" />
+    <Content Include="Manage\Images\google.jpg" />
+    <Content Include="Manage\Images\headline1.jpg" />
+    <Content Include="Manage\Images\inputbg.gif" />
+    <Content Include="Manage\Images\List_tb_headlinebg.jpg" />
+    <Content Include="Manage\Images\loading.gif" />
+    <Content Include="Manage\Images\loadingBar.gif" />
+    <Content Include="Manage\Images\Login\body.gif" />
+    <Content Include="Manage\Images\Login\login.png" />
+    <Content Include="Manage\Images\Login\login_button.gif" />
+    <Content Include="Manage\Images\main\70.png" />
+    <Content Include="Manage\Images\main\ico_list.gif" />
+    <Content Include="Manage\Images\main\info_del.gif" />
+    <Content Include="Manage\Images\main\info_edit.gif" />
+    <Content Include="Manage\Images\main\info_view.gif" />
+    <Content Include="Manage\Images\main\main_right.gif" />
+    <Content Include="Manage\Images\main\netgather_com.gif" />
+    <Content Include="Manage\Images\main\seo.jpg" />
+    <Content Include="Manage\Images\main\sysadd.gif" />
+    <Content Include="Manage\Images\msn\msn_1.gif" />
+    <Content Include="Manage\Images\msn\msn_10.gif" />
+    <Content Include="Manage\Images\msn\msn_11.gif" />
+    <Content Include="Manage\Images\msn\msn_12.gif" />
+    <Content Include="Manage\Images\msn\msn_13.gif" />
+    <Content Include="Manage\Images\msn\msn_2.gif" />
+    <Content Include="Manage\Images\msn\msn_3.gif" />
+    <Content Include="Manage\Images\msn\msn_4.gif" />
+    <Content Include="Manage\Images\msn\msn_5.gif" />
+    <Content Include="Manage\Images\msn\msn_6.gif" />
+    <Content Include="Manage\Images\msn\msn_7.gif" />
+    <Content Include="Manage\Images\msn\msn_8.gif" />
+    <Content Include="Manage\Images\msn\msn_9.gif" />
+    <Content Include="Manage\Images\no.png" />
+    <Content Include="Manage\Images\nofollow.gif" />
+    <Content Include="Manage\Images\plus.gif" />
+    <Content Include="Manage\Images\qq\qq_1.jpg" />
+    <Content Include="Manage\Images\qq\qq_10.jpg" />
+    <Content Include="Manage\Images\qq\qq_11.jpg" />
+    <Content Include="Manage\Images\qq\qq_12.jpg" />
+    <Content Include="Manage\Images\qq\qq_13.jpg" />
+    <Content Include="Manage\Images\qq\qq_2.jpg" />
+    <Content Include="Manage\Images\qq\qq_3.jpg" />
+    <Content Include="Manage\Images\qq\qq_4.jpg" />
+    <Content Include="Manage\Images\qq\qq_41.jpg" />
+    <Content Include="Manage\Images\qq\qq_42.jpg" />
+    <Content Include="Manage\Images\qq\qq_43.jpg" />
+    <Content Include="Manage\Images\qq\qq_44.jpg" />
+    <Content Include="Manage\Images\qq\qq_45.jpg" />
+    <Content Include="Manage\Images\qq\qq_46.jpg" />
+    <Content Include="Manage\Images\qq\qq_47.jpg" />
+    <Content Include="Manage\Images\qq\qq_5.jpg" />
+    <Content Include="Manage\Images\qq\qq_6.jpg" />
+    <Content Include="Manage\Images\qq\qq_7.jpg" />
+    <Content Include="Manage\Images\qq\qq_8.jpg" />
+    <Content Include="Manage\Images\qq\qq_9.jpg" />
+    <Content Include="Manage\Images\skype\skype_1.gif" />
+    <Content Include="Manage\Images\skype\skype_10.gif" />
+    <Content Include="Manage\Images\skype\skype_11.gif" />
+    <Content Include="Manage\Images\skype\skype_12.gif" />
+    <Content Include="Manage\Images\skype\skype_13.gif" />
+    <Content Include="Manage\Images\skype\skype_2.gif" />
+    <Content Include="Manage\Images\skype\skype_3.gif" />
+    <Content Include="Manage\Images\skype\skype_4.gif" />
+    <Content Include="Manage\Images\skype\skype_5.gif" />
+    <Content Include="Manage\Images\skype\skype_6.gif" />
+    <Content Include="Manage\Images\skype\skype_7.gif" />
+    <Content Include="Manage\Images\skype\skype_8.gif" />
+    <Content Include="Manage\Images\skype\skype_9.gif" />
+    <Content Include="Manage\Images\soso.jpg" />
+    <Content Include="Manage\Images\taobao\taobao_1.jpg" />
+    <Content Include="Manage\Images\taobao\taobao_2.jpg" />
+    <Content Include="Manage\Images\titlebg.png" />
+    <Content Include="Manage\Images\Tree\add.gif" />
+    <Content Include="Manage\Images\Tree\base.gif" />
+    <Content Include="Manage\Images\Tree\calendar.gif" />
+    <Content Include="Manage\Images\Tree\catch.gif" />
+    <Content Include="Manage\Images\Tree\cd.gif" />
+    <Content Include="Manage\Images\Tree\contacts.gif" />
+    <Content Include="Manage\Images\Tree\deleted.gif" />
+    <Content Include="Manage\Images\Tree\deletedFolder.gif" />
+    <Content Include="Manage\Images\Tree\drafts.gif" />
+    <Content Include="Manage\Images\Tree\drafts2.gif" />
+    <Content Include="Manage\Images\Tree\empty.gif" />
+    <Content Include="Manage\Images\Tree\folder.gif" />
+    <Content Include="Manage\Images\Tree\folder2.gif" />
+    <Content Include="Manage\Images\Tree\folderopen.gif" />
+    <Content Include="Manage\Images\Tree\folders.gif" />
+    <Content Include="Manage\Images\Tree\globe.gif" />
+    <Content Include="Manage\Images\Tree\imgfolder.gif" />
+    <Content Include="Manage\Images\Tree\inbox.gif" />
+    <Content Include="Manage\Images\Tree\join.gif" />
+    <Content Include="Manage\Images\Tree\joinbottom.gif" />
+    <Content Include="Manage\Images\Tree\junk.gif" />
+    <Content Include="Manage\Images\Tree\line.gif" />
+    <Content Include="Manage\Images\Tree\logout.gif" />
+    <Content Include="Manage\Images\Tree\mail.gif" />
+    <Content Include="Manage\Images\Tree\minus.gif" />
+    <Content Include="Manage\Images\Tree\minusbottom.gif" />
+    <Content Include="Manage\Images\Tree\musicfolder.gif" />
+    <Content Include="Manage\Images\Tree\nolines_minus.gif" />
+    <Content Include="Manage\Images\Tree\nolines_plus.gif" />
+    <Content Include="Manage\Images\Tree\notes.gif" />
+    <Content Include="Manage\Images\Tree\notes2.gif" />
+    <Content Include="Manage\Images\Tree\outbox.gif" />
+    <Content Include="Manage\Images\Tree\page.gif" />
+    <Content Include="Manage\Images\Tree\plus.gif" />
+    <Content Include="Manage\Images\Tree\plusbottom.gif" />
+    <Content Include="Manage\Images\Tree\poll.gif" />
+    <Content Include="Manage\Images\Tree\question.gif" />
+    <Content Include="Manage\Images\Tree\remark.gif" />
+    <Content Include="Manage\Images\Tree\root.gif" />
+    <Content Include="Manage\Images\Tree\search.gif" />
+    <Content Include="Manage\Images\Tree\searchFolder.gif" />
+    <Content Include="Manage\Images\Tree\sentItems.gif" />
+    <Content Include="Manage\Images\Tree\setting.gif" />
+    <Content Include="Manage\Images\Tree\setting_2.gif" />
+    <Content Include="Manage\Images\Tree\tasks.gif" />
+    <Content Include="Manage\Images\Tree\trash.gif" />
+    <Content Include="Manage\Images\Tree\user.gif" />
+    <Content Include="Manage\Images\Tree\users.gif" />
+    <Content Include="Manage\Images\yes.png" />
+    <Content Include="Manage\Images\youdao.jpg" />
+    <Content Include="Manage\KindEditor\asp.net\bin\LitJSON.dll" />
+    <Content Include="Manage\KindEditor\asp.net\demo.aspx" />
+    <Content Include="Manage\KindEditor\asp.net\README.txt" />
+    <Content Include="Manage\KindEditor\kindeditor-min.js" />
+    <Content Include="Manage\KindEditor\kindeditor.js" />
+    <Content Include="Manage\KindEditor\lang\zh_CN.js" />
+    <Content Include="Manage\KindEditor\license.txt" />
+    <Content Include="Manage\KindEditor\plugins\anchor\anchor.js" />
+    <Content Include="Manage\KindEditor\plugins\baidumap\baidumap.js" />
+    <Content Include="Manage\KindEditor\plugins\baidumap\map.html" />
+    <Content Include="Manage\KindEditor\plugins\clearhtml\clearhtml.js" />
+    <Content Include="Manage\KindEditor\plugins\code\code.js" />
+    <Content Include="Manage\KindEditor\plugins\code\prettify.css" />
+    <Content Include="Manage\KindEditor\plugins\code\prettify.js" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\emoticons.js" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\0.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\1.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\10.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\100.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\101.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\102.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\103.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\104.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\105.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\106.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\107.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\108.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\109.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\11.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\110.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\111.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\112.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\113.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\114.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\115.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\116.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\117.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\118.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\119.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\12.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\120.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\121.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\122.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\123.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\124.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\125.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\126.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\127.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\128.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\129.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\13.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\130.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\131.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\132.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\133.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\134.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\14.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\15.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\16.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\17.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\18.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\19.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\2.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\20.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\21.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\22.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\23.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\24.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\25.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\26.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\27.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\28.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\29.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\3.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\30.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\31.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\32.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\33.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\34.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\35.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\36.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\37.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\38.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\39.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\4.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\40.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\41.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\42.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\43.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\44.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\45.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\46.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\47.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\48.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\49.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\5.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\50.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\51.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\52.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\53.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\54.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\55.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\56.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\57.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\58.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\59.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\6.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\60.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\61.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\62.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\63.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\64.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\65.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\66.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\67.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\68.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\69.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\7.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\70.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\71.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\72.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\73.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\74.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\75.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\76.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\77.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\78.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\79.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\8.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\80.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\81.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\82.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\83.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\84.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\85.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\86.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\87.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\88.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\89.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\9.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\90.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\91.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\92.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\93.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\94.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\95.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\96.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\97.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\98.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\99.gif" />
+    <Content Include="Manage\KindEditor\plugins\emoticons\images\static.gif" />
+    <Content Include="Manage\KindEditor\plugins\filemanager\filemanager.js" />
+    <Content Include="Manage\KindEditor\plugins\filemanager\images\file-16.gif" />
+    <Content Include="Manage\KindEditor\plugins\filemanager\images\file-64.gif" />
+    <Content Include="Manage\KindEditor\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="Manage\KindEditor\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="Manage\KindEditor\plugins\filemanager\images\go-up.gif" />
+    <Content Include="Manage\KindEditor\plugins\flash\flash.js" />
+    <Content Include="Manage\KindEditor\plugins\image\image.js" />
+    <Content Include="Manage\KindEditor\plugins\image\images\align_left.gif" />
+    <Content Include="Manage\KindEditor\plugins\image\images\align_right.gif" />
+    <Content Include="Manage\KindEditor\plugins\image\images\align_top.gif" />
+    <Content Include="Manage\KindEditor\plugins\image\images\refresh.png" />
+    <Content Include="Manage\KindEditor\plugins\insertfile\insertfile.js" />
+    <Content Include="Manage\KindEditor\plugins\lineheight\lineheight.js" />
+    <Content Include="Manage\KindEditor\plugins\link\link.js" />
+    <Content Include="Manage\KindEditor\plugins\map\map.html" />
+    <Content Include="Manage\KindEditor\plugins\map\map.js" />
+    <Content Include="Manage\KindEditor\plugins\media\media.js" />
+    <Content Include="Manage\KindEditor\plugins\multiimage\images\image.png" />
+    <Content Include="Manage\KindEditor\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="Manage\KindEditor\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="Manage\KindEditor\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="Manage\KindEditor\plugins\multiimage\multiimage.js" />
+    <Content Include="Manage\KindEditor\plugins\pagebreak\pagebreak.js" />
+    <Content Include="Manage\KindEditor\plugins\plainpaste\plainpaste.js" />
+    <Content Include="Manage\KindEditor\plugins\preview\preview.js" />
+    <Content Include="Manage\KindEditor\plugins\quickformat\quickformat.js" />
+    <Content Include="Manage\KindEditor\plugins\table\table.js" />
+    <Content Include="Manage\KindEditor\plugins\template\html\1.html" />
+    <Content Include="Manage\KindEditor\plugins\template\html\2.html" />
+    <Content Include="Manage\KindEditor\plugins\template\html\3.html" />
+    <Content Include="Manage\KindEditor\plugins\template\template.js" />
+    <Content Include="Manage\KindEditor\plugins\wordpaste\wordpaste.js" />
+    <Content Include="Manage\KindEditor\themes\common\anchor.gif" />
+    <Content Include="Manage\KindEditor\themes\common\blank.gif" />
+    <Content Include="Manage\KindEditor\themes\common\flash.gif" />
+    <Content Include="Manage\KindEditor\themes\common\loading.gif" />
+    <Content Include="Manage\KindEditor\themes\common\media.gif" />
+    <Content Include="Manage\KindEditor\themes\common\rm.gif" />
+    <Content Include="Manage\KindEditor\themes\default\background.png" />
+    <Content Include="Manage\KindEditor\themes\default\default.css" />
+    <Content Include="Manage\KindEditor\themes\default\default.png" />
+    <Content Include="Manage\KindEditor\themes\qq\editor.gif" />
+    <Content Include="Manage\KindEditor\themes\qq\qq.css" />
+    <Content Include="Manage\KindEditor\themes\simple\simple.css" />
+    <Content Include="Manage\Login.aspx" />
+    <Content Include="Manage\Logout.aspx" />
+    <Content Include="Manage\Module\FeedbackList.aspx" />
+    <Content Include="Manage\Module\FeedbackShow.aspx" />
+    <Content Include="Manage\Module\ImageAdd.aspx" />
+    <Content Include="Manage\Module\ImageList.aspx" />
+    <Content Include="Manage\Module\JobAdd.aspx" />
+    <Content Include="Manage\Module\JobList.aspx" />
+    <Content Include="Manage\Module\LinkAdd.aspx" />
+    <Content Include="Manage\Module\LinkGroupAdd.aspx" />
+    <Content Include="Manage\Module\LinkGroupList.aspx" />
+    <Content Include="Manage\Module\LinkList.aspx" />
+    <Content Include="Manage\Module\NewsAdd.aspx" />
+    <Content Include="Manage\Module\NewsCopyTo.aspx" />
+    <Content Include="Manage\Module\NewsList.aspx" />
+    <Content Include="Manage\Module\NewsMoveTo.aspx" />
+    <Content Include="Manage\Module\ProductAdd.aspx" />
+    <Content Include="Manage\Module\ProductList.aspx" />
+    <Content Include="Manage\My97DatePicker\calendar.js" />
+    <Content Include="Manage\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Manage\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Manage\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Manage\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Manage\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Manage\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Manage\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Manage\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Manage\My97DatePicker\WdatePicker.js" />
+    <Content Include="Manage\Scripts\browser.js" />
+    <Content Include="Manage\Scripts\calendar.js" />
+    <Content Include="Manage\Scripts\dataLoading.js" />
+    <Content Include="Manage\Scripts\fancybox\blank.gif" />
+    <Content Include="Manage\Scripts\fancybox\fancybox-x.png" />
+    <Content Include="Manage\Scripts\fancybox\fancybox-y.png" />
+    <Content Include="Manage\Scripts\fancybox\fancybox.png" />
+    <Content Include="Manage\Scripts\fancybox\lib\jquery-1.9.0.min.js" />
+    <Content Include="Manage\Scripts\fancybox\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Manage\Scripts\fancybox\source\blank.gif" />
+    <Content Include="Manage\Scripts\fancybox\source\fancybox_loading.gif" />
+    <Content Include="Manage\Scripts\fancybox\source\fancybox_overlay.png" />
+    <Content Include="Manage\Scripts\fancybox\source\fancybox_sprite.png" />
+    <Content Include="Manage\Scripts\fancybox\source\helpers\fancybox_buttons.png" />
+    <Content Include="Manage\Scripts\fancybox\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Manage\Scripts\fancybox\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Manage\Scripts\fancybox\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="Manage\Scripts\fancybox\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Manage\Scripts\fancybox\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Manage\Scripts\fancybox\source\jquery.fancybox.css" />
+    <Content Include="Manage\Scripts\fancybox\source\jquery.fancybox.js" />
+    <Content Include="Manage\Scripts\fancybox\source\jquery.fancybox.pack.js" />
+    <Content Include="Manage\Scripts\fancybox\source\jquery.fancybox.zh-cn.js" />
+    <Content Include="Manage\Scripts\fancyzoom.js" />
+    <Content Include="Manage\Scripts\fancyzoom\jquery.fancyzoom.js" />
+    <Content Include="Manage\Scripts\fancyzoom\jquery.fancyzoom.min.js" />
+    <Content Include="Manage\Scripts\ie6png.js" />
+    <Content Include="Manage\Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Manage\Scripts\jquery.ifixpng.js" />
+    <Content Include="Manage\Scripts\jquery.layout-130.js" />
+    <Content Include="Manage\Scripts\jquery.layout.default.css" />
+    <Content Include="Manage\Scripts\jquery.shadow.js" />
+    <Content Include="Manage\Scripts\jquery.tooltip.js" />
+    <Content Include="Manage\Scripts\minmax.js" />
+    <Content Include="Manage\Scripts\online.js" />
+    <Content Include="Manage\Scripts\servicer.js" />
+    <Content Include="Manage\Scripts\tree.js" />
+    <Content Include="Manage\Scripts\zDialog\forZDialogDemo.html" />
+    <Content Include="Manage\Scripts\zDialog\images\buticon.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_bg.jpg" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_cb.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_cb.png" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_closebtn.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_closebtn_over.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_ct.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_ct.png" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_lb.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_lb.png" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_lt.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_lt.png" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_mlm.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_mlm.png" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_mrm.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_mrm.png" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_rb.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_rb.png" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_rt.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\dialog_rt.png" />
+    <Content Include="Manage\Scripts\zDialog\images\dir.txt" />
+    <Content Include="Manage\Scripts\zDialog\images\icon_alert.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\icon_dialog.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\icon_query.gif" />
+    <Content Include="Manage\Scripts\zDialog\images\window.gif" />
+    <Content Include="Manage\Scripts\zDialog\index.html" />
+    <Content Include="Manage\Scripts\zDialog\test.html" />
+    <Content Include="Manage\Scripts\zDialog\zDialog.js" />
+    <Content Include="Manage\Scripts\zDialog\zDrag.js" />
+    <Content Include="Manage\SWFUpload\aXPButtonUploadText_61x22.png" />
+    <Content Include="Manage\SWFUpload\cancelbutton.gif" />
+    <Content Include="Manage\SWFUpload\Core Changelog.txt" />
+    <Content Include="Manage\SWFUpload\Documentation\index.html" />
+    <Content Include="Manage\SWFUpload\Flash\obj\SWFUpload-v2Config.xml" />
+    <Content Include="Manage\SWFUpload\Flash\swfupload.swf" />
+    <Content Include="Manage\SWFUpload\handlers.js" />
+    <Content Include="Manage\SWFUpload\plugins\SWFObject License.txt" />
+    <Content Include="Manage\SWFUpload\plugins\swfupload.cookies.js" />
+    <Content Include="Manage\SWFUpload\plugins\swfupload.progress.js" />
+    <Content Include="Manage\SWFUpload\plugins\swfupload.queue.js" />
+    <Content Include="Manage\SWFUpload\plugins\swfupload.speed.js" />
+    <Content Include="Manage\SWFUpload\plugins\swfupload.swfobject.js" />
+    <Content Include="Manage\SWFUpload\swfupload license.txt" />
+    <Content Include="Manage\SWFUpload\swfupload.css" />
+    <Content Include="Manage\SWFUpload\swfupload.js" />
+    <Content Include="Manage\SWFUpload\swfupload.swf" />
+    <Content Include="Manage\SWFUpload\swfupload_fp9.swf" />
+    <Content Include="Manage\SWFUpload\XPButtonUploadText_61x22.png" />
+    <Content Include="Manage\System\BasicSet.aspx" />
+    <Content Include="Manage\System\CompanyAdd.aspx" />
+    <Content Include="Manage\System\CompanyList.aspx" />
+    <Content Include="Manage\System\ImageSet.aspx" />
+    <Content Include="Manage\System\LanguageAdd.aspx" />
+    <Content Include="Manage\System\LanguageList.aspx" />
+    <Content Include="Manage\System\MenuAdd.aspx" />
+    <Content Include="Manage\System\MenuList.aspx" />
+    <Content Include="Manage\System\NewsCatalogAdd.aspx" />
+    <Content Include="Manage\System\NewsCatalogList.aspx" />
+    <Content Include="Manage\System\RoleAdd.aspx" />
+    <Content Include="Manage\System\RoleList.aspx" />
+    <Content Include="Manage\System\ServicerAdd.aspx" />
+    <Content Include="Manage\System\ServicerList.aspx" />
+    <Content Include="Manage\System\ServicerSet.aspx" />
+    <Content Include="Manage\System\UserAdd.aspx" />
+    <Content Include="Manage\System\UserList.aspx" />
+    <Content Include="Manage\System\UserPurview.aspx" />
+    <Content Include="Manage\System\UserRole.aspx" />
+    <Content Include="Manage\TipsWindown\bg.png" />
+    <Content Include="Manage\TipsWindown\icon.png" />
+    <Content Include="Manage\TipsWindown\loading.gif" />
+    <Content Include="Manage\TipsWindown\loading_1.gif" />
+    <Content Include="Manage\TipsWindown\pupop_bg.png" />
+    <Content Include="Manage\TipsWindown\tipswindow.css" />
+    <Content Include="Manage\TipsWindown\tipswindow.js" />
+    <Content Include="Manage\ValidateCode.aspx" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\scroll.js" />
+    <Content Include="Scripts\Tween.js" />
+    <Content Include="Scripts\XScroll.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cn\ImageList.aspx.cs">
+      <DependentUpon>ImageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\ImageList.aspx.designer.cs">
+      <DependentUpon>ImageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\ImageShow.aspx.cs">
+      <DependentUpon>ImageShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\ImageShow.aspx.designer.cs">
+      <DependentUpon>ImageShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\Inquiry.aspx.cs">
+      <DependentUpon>Inquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\Inquiry.aspx.designer.cs">
+      <DependentUpon>Inquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\JobList.aspx.cs">
+      <DependentUpon>JobList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\JobList.aspx.designer.cs">
+      <DependentUpon>JobList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\JobShow.aspx.cs">
+      <DependentUpon>JobShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\JobShow.aspx.designer.cs">
+      <DependentUpon>JobShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\NestedSite.master.cs">
+      <DependentUpon>NestedSite.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\NestedSite.master.designer.cs">
+      <DependentUpon>NestedSite.master</DependentUpon>
+    </Compile>
+    <Compile Include="cn\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\NewsShow.aspx.cs">
+      <DependentUpon>NewsShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\NewsShow.aspx.designer.cs">
+      <DependentUpon>NewsShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\Page.aspx.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\Page.aspx.designer.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\ProductShow.aspx.cs">
+      <DependentUpon>ProductShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\ProductShow.aspx.designer.cs">
+      <DependentUpon>ProductShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cn\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="cn\Sitemap.aspx.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cn\Sitemap.aspx.designer.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\ImageList.aspx.cs">
+      <DependentUpon>ImageList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\ImageList.aspx.designer.cs">
+      <DependentUpon>ImageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\ImageShow.aspx.cs">
+      <DependentUpon>ImageShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\ImageShow.aspx.designer.cs">
+      <DependentUpon>ImageShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\Inquiry.aspx.cs">
+      <DependentUpon>Inquiry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\Inquiry.aspx.designer.cs">
+      <DependentUpon>Inquiry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\NestedSite.master.cs">
+      <DependentUpon>NestedSite.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\NestedSite.master.designer.cs">
+      <DependentUpon>NestedSite.master</DependentUpon>
+    </Compile>
+    <Compile Include="en\NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\NewsShow.aspx.cs">
+      <DependentUpon>NewsShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\NewsShow.aspx.designer.cs">
+      <DependentUpon>NewsShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\Page.aspx.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\Page.aspx.designer.cs">
+      <DependentUpon>Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\ProductShow.aspx.cs">
+      <DependentUpon>ProductShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\ProductShow.aspx.designer.cs">
+      <DependentUpon>ProductShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="en\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="en\Sitemap.aspx.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="en\Sitemap.aspx.designer.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="en\NestedSite.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\entCMS.Common\entCMS.Common.csproj">
+      <Project>{76AFF48A-6533-4FD7-AA06-0534FC10363F}</Project>
+      <Name>entCMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entCMS.Manage\entCMS.Manage.csproj">
+      <Project>{20AFF1FB-E8DB-4358-AE1C-B57078CBC097}</Project>
+      <Name>entCMS.Manage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entCMS.Models\entCMS.Models.csproj">
+      <Project>{3FB5785C-7283-4D75-97DA-40D9A758CFDB}</Project>
+      <Name>entCMS.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entCMS.Services\entCMS.Services.csproj">
+      <Project>{0F0A20BB-1A8D-4B46-9344-86582DFF20C2}</Project>
+      <Name>entCMS.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.config" />
+    <Content Include="Manage\KE_FileManager.ashx" />
+    <Content Include="Manage\KE_UploadManager.ashx" />
+    <Content Include="Manage\KindEditor\asp.net\file_manager_json.ashx" />
+    <Content Include="Manage\KindEditor\asp.net\upload_json.ashx" />
+    <Content Include="Manage\MasterPage.master" />
+    <Content Include="Manage\System\Ajax.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cn\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cn\NestedSite.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cn\lang.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="en\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="en\lang.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Manage\Config\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>36973</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

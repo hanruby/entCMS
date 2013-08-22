@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hxj.Charting</name>
+    </assembly>
+    <members>
+        <member name="T:Hxj.Charting.Charting">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Hxj.Charting.Charting._numberPercision">
+            <summary>
+            y轴值保留几位小数
+            </summary>
+        </member>
+        <member name="F:Hxj.Charting.Charting._staticColumnWidth">
+            <summary>
+            x轴列宽度
+            </summary>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreateColumn(dotnetCHARTING.Chart)">
+            <summary>
+            柱形图
+            </summary>
+            <param name="chart"></param>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreateColumn(dotnetCHARTING.Chart,System.String,Hxj.Charting.Charting.SeriesBy)">
+            <summary>
+            柱形图
+            </summary>
+            <param name="chart">chart控件</param>
+            <param name="columnName">列名</param>
+            <param name="seriesBy"></param>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreateLine(dotnetCHARTING.Chart)">
+            <summary>
+            曲线图
+            </summary>
+            <param name="chart"></param>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreateLine(dotnetCHARTING.Chart,System.String,Hxj.Charting.Charting.SeriesBy)">
+            <summary>
+            曲线图
+            </summary>
+            <param name="chart"></param>
+            <param name="columnName"></param>
+            <param name="seriesBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreatePie(dotnetCHARTING.Chart)">
+            <summary>
+            单饼图
+            </summary>
+            <param name="chart"></param>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreatePie(dotnetCHARTING.Chart,System.String)">
+            <summary>
+            单饼图
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreatePies(dotnetCHARTING.Chart)">
+            <summary>
+            多个饼图
+            </summary>
+            <param name="chart"></param>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreatePies(dotnetCHARTING.Chart,System.String)">
+            <summary>
+            多个饼图
+            </summary>
+            <param name="chart"></param>
+            <param name="columnName"></param>
+        </member>
+        <member name="M:Hxj.Charting.Charting.CreatePie(dotnetCHARTING.Chart,System.String,dotnetCHARTING.ChartType,Hxj.Charting.Charting.SeriesBy)">
+            <summary>
+            饼图
+            </summary>
+            <param name="chart"></param>
+            <param name="columnName"></param>
+            <param name="chartType"></param>
+            <param name="seriesBy"></param>
+        </member>
+        <member name="M:Hxj.Charting.Charting.SetDefault(dotnetCHARTING.Chart,dotnetCHARTING.SeriesType)">
+            <summary>
+            基本样式设定
+            </summary>
+            <param name="chart"></param>
+            <param name="seriesType"></param>
+        </member>
+        <member name="M:Hxj.Charting.Charting.getSeriesData">
+            <summary>
+            单序列
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hxj.Charting.Charting.getSeriesData(System.String,Hxj.Charting.Charting.SeriesBy)">
+            <summary>
+            多序列元素名字段（例如：指标名）
+            </summary>
+            <param name="columnName"></param>
+            <param name="seriesBy"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Hxj.Charting.Charting.StaticColumnWidth">
+            <summary>
+            x轴列宽度
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.NumberPercision">
+            <summary>
+            y轴值保留几位小数
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.PhaysicalImagePath">
+            
+            <summary>
+            图片存放路径
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.Title">
+            
+            <summary>
+            图片标题
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.XTitle">
+            
+            <summary>
+            图片x座标名称
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.YTitle">
+            
+            <summary>
+            图片y座标名称
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.SeriesName">
+            
+            <summary>
+            图例名称
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.PicWidth">
+            
+            <summary>
+            图片宽度
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.PicHight">
+            
+            <summary>
+            图片高度
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.Type">
+            <summary>
+            统计图类型(柱形,线形等)
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.Use3D">
+            <summary>
+            是否将输出的图片显示成三维
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.DataSource">
+            <summary>
+            对比图形数据源
+            </summary>
+        </member>
+        <member name="P:Hxj.Charting.Charting.FileName">
+            <summary>
+            生成统计图片的名称
+            </summary>
+        </member>
+    </members>
+</doc>

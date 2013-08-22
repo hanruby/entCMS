@@ -1,0 +1,74 @@
+﻿
+                        <script type="text/javascript">$(document).ready(function () { highlight(1, 0, 0, 1); });</script>
+                        <a onclick="javascript:highlight(1);" id="flip_1" class="flip" href="#">About Us</a>
+                        <ul class="panel" id="panel_1">
+                            <li>
+                                <a class="panel_11" href="#" onclick="javascript:panelsub(1,1);">Philosophy</a>
+                            </li>
+                            <li id="panelsubmenu_11" class="panelsubmenu">
+                                <a class="panelsub_111" href="#">Our Vision</a> 
+                                <a class="panelsub_112" href="#">Our Logo</a>
+                            </li>
+                            <li>
+                                <a class="panel_13" href="#">Fast Facts</a>
+                                <ul class="panel" id="panel_131">
+                                    <li>
+                                        <a class="panel_131" href="#">test1</a>
+                                        <a class="panel_132" href="#">test2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="panel_14" href="#">Awards</a>
+                            </li>
+                            <li>
+                                <a class="panel_15" href="#">Quality Accreditations</a>
+                            </li>
+                            <li>
+                                <a class="panel_16" href="#"onclick="javascript:panelsub(1,6);">Responsibility</a>
+                            </li>
+                            <li id="panelsubmenu_16" class="panelsubmenu">
+                                <a class="panelsub_161" href="#">Environment</a>
+                                <a class="panelsub_162" href="#">Society</a>
+                                <a class="panelsub_163" href="#">Community</a>
+                                <a class="panelsub_164" href="#">Employees</a>
+                            </li>
+                        </ul>
+                        <a onclick="javascript:highlight(2);" id="flip_2" class="flip" href="#">Career</a>
+                        <ul class="panel" id="panel_2">
+                            <li>
+                                <a class="panel_21" href="#" onclick="javascript:panelsub(2,1);">Working at Kerry Logistics</a>
+                            </li>
+                            <li id="panelsubmenu_21" class="panelsubmenu">
+                                <a class="panelsub_211" href="#">Our Company</a>
+                                <a class="panelsub_212" href="#">Our Philosophy</a>
+                                <a class="panelsub_213" href="#">Our People</a>
+                            </li>
+                            <li>
+                                <a class="panel_22" href="#">Management Trainee</a>
+                            </li>
+                        </ul>
+                        <a onclick="javascript:highlight(3);" id="flip_3" class="flip" href="#">Press</a>
+                        <ul class="panel" id="panel_3">
+                            <li>
+                                <a class="panel_31" href="#">Press Release</a>
+                            </li>
+                            <li>
+                                <a class="panel_32" href="#" onclick="javascript:panelsub(3,2);">Publications</a>
+                            </li>
+                            <li id="panelsubmenu_32" class="panelsubmenu">
+                                <a class="panelsub_321" href="#">Kerry Logistics FOCUS</a>
+                                <a class="panelsub_322" href="#">Corporate Brochure</a>
+                                <a class="panelsub_323" href="#">Industry Solutions Flyers</a>
+                                <a class="panelsub_324" href="#">Service Flyers</a>
+                                <a class="panelsub_325" href="#">Country Flyers</a>
+                            </li>
+                            <li>
+                                <a class="panel_33" href="#" onclick="javascript:panelsub(3,3);">Image Gallery</a>
+                            </li>
+                            <li id="panelsubmenu_33" class="panelsubmenu">
+                                <a class="panelsub_331" href="#">Logo</a>
+                                <a class="panelsub_332" href="#">Photos</a>
+                                <a class="panelsub_333" href="#">Videos</a>
+                            </li>
+                        </ul>

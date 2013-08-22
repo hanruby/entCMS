@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/en/Site.Master" AutoEventWireup="true" CodeBehind="NestedSite.master.cs" Inherits="entCMS.Web.en.NestedSite" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
+    <div class="ny_left">
+        <div class="ny_left1"><%=webPage.TopNode.NodeName%></div>
+        <div class="ny_left2">
+            <ul>
+                <%
+                    System.Collections.Generic.List<entCMS.Models.cmsNewsCatalog> catalogs = webPage.GetChildNodes();
+                for (int i = 0; i < catalogs.Count; i++)
+                {
+                %>
+                <li><%=webPage.GetNodeUrl(catalogs[i].NodeCode, true)%></li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="ny_left1">Contact Us</div>
+        <div class="ny_left2">
+            <p style="padding:4px;">
+                <%=webPage.Company.ComName%><br />
+                Addr: <%=webPage.Company.ComAddr%><br />
+                Tel.:  <%=webPage.Company.ComTel%><br />
+                Fax.:  <%=webPage.Company.ComFax%><br />
+                Email:<%=webPage.Company.ComEmail%><br />
+            </p>
+        </div>
+    </div>
+    <div class="ny_right">
+        <div class="ny_right1">
+            <table width="95%" height="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                <tbody>
+                    <tr>
+                        <td align="left" style="color: #3f3f3f; font-size: 14px; font-weight: bold">
+                            <%=webPage.Node.NodeName%>
+                        </td>
+                        <td align="right">
+                            &nbsp;You are here: Home <%=webPage.GetNavStr(" &gt ")%>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="ny_right2"></div>
+        <div class="ny_right3">
+            <asp:ContentPlaceHolder ID="cphMain" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div class="clear"></div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphFoot" runat="server">
+    <asp:ContentPlaceHolder ID="cphFoot" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

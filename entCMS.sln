@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entCMS.Common", "entCMS.Common\entCMS.Common.csproj", "{76AFF48A-6533-4FD7-AA06-0534FC10363F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entCMS.Models", "entCMS.Models\entCMS.Models.csproj", "{3FB5785C-7283-4D75-97DA-40D9A758CFDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entCMS.Services", "entCMS.Services\entCMS.Services.csproj", "{0F0A20BB-1A8D-4B46-9344-86582DFF20C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entCMS.Manage", "entCMS.Manage\entCMS.Manage.csproj", "{20AFF1FB-E8DB-4358-AE1C-B57078CBC097}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entCMS.DebowMotorWeb", "entCMS.Web\entCMS.DebowMotorWeb.csproj", "{D8900D28-D170-4D21-AA28-30D8FACC4CB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entCMS.HengyiLogisticsWeb", "websites\entCMS.HengyiLogisticsWeb\entCMS.HengyiLogisticsWeb.csproj", "{85D5461C-295C-479F-A1BB-DA3F66364BE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Websites", "Websites", "{AA00091B-03A0-4403-99FB-5FAAC3FC8729}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76AFF48A-6533-4FD7-AA06-0534FC10363F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76AFF48A-6533-4FD7-AA06-0534FC10363F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76AFF48A-6533-4FD7-AA06-0534FC10363F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76AFF48A-6533-4FD7-AA06-0534FC10363F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FB5785C-7283-4D75-97DA-40D9A758CFDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB5785C-7283-4D75-97DA-40D9A758CFDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB5785C-7283-4D75-97DA-40D9A758CFDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB5785C-7283-4D75-97DA-40D9A758CFDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F0A20BB-1A8D-4B46-9344-86582DFF20C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F0A20BB-1A8D-4B46-9344-86582DFF20C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F0A20BB-1A8D-4B46-9344-86582DFF20C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F0A20BB-1A8D-4B46-9344-86582DFF20C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20AFF1FB-E8DB-4358-AE1C-B57078CBC097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AFF1FB-E8DB-4358-AE1C-B57078CBC097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AFF1FB-E8DB-4358-AE1C-B57078CBC097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AFF1FB-E8DB-4358-AE1C-B57078CBC097}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8900D28-D170-4D21-AA28-30D8FACC4CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8900D28-D170-4D21-AA28-30D8FACC4CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8900D28-D170-4D21-AA28-30D8FACC4CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8900D28-D170-4D21-AA28-30D8FACC4CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85D5461C-295C-479F-A1BB-DA3F66364BE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85D5461C-295C-479F-A1BB-DA3F66364BE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85D5461C-295C-479F-A1BB-DA3F66364BE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85D5461C-295C-479F-A1BB-DA3F66364BE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85D5461C-295C-479F-A1BB-DA3F66364BE8} = {AA00091B-03A0-4403-99FB-5FAAC3FC8729}
+		{D8900D28-D170-4D21-AA28-30D8FACC4CB4} = {AA00091B-03A0-4403-99FB-5FAAC3FC8729}
+	EndGlobalSection
+EndGlobal

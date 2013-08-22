@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="entCMS.Web.cn.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <asp:Literal ID="ltlKeyword" runat="server"></asp:Literal>
+    <asp:Literal ID="ltlDescription" runat="server"></asp:Literal>
+    <link href="css/global.css" rel="stylesheet" type="text/css" />
+    <link href="css/lib.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/scripts/jquery-1.9.0.min.js")%>"></script>
+    <script type="text/javascript" src="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/Manage/scripts/browser.js")%>"></script>
+    <script type="text/javascript" src="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/scripts/common.js")%>"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('.nav_m').allenMenu();
+            jQuery('products_nav').allenMenu();
+            jQuery('#slide').allenSlide();
+        });
+    </script>
+    <script type="text/javascript">
+        function search(keyword) {
+            location.href = "Search.aspx?kw=" + escape(keyword);
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="main_body">
+    <form id="form1" runat="server">
+    <div id="head">
+        <div class="logo">
+            <div class="logo_l"><a href="<%=webPage.GetClientUrl("./") %>"><img src="<%=WebLogo %>" alt="<%=WebName %>" /></a></div>
+            <div class="logo_r">
+                <div class="langs">
+                    <ul>
+                        <li class="right"></li>
+                        <li class="mid">
+                            <table cellspacing="0" cellpadding="0" border="0" align="right">
+                                <tbody>
+                                    <tr>
+                                        <%foreach (entCMS.Models.cmsLanguage lng in webPage.Languages)
+                                          {
+                                            string flag = webPage.GetClientUrl("~/Images/flags/" + lng.Code + ".gif");
+                                        %>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                        <td width="22"><img border="0" align="middle" src="<%=flag%>" alt=""/></td>
+                                        <td><a href="<%=webPage.GetClientUrl(lng.HomeUrl)%>"><%=lng.ShortName%></a></td>
+                                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                        <%}%>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="left"></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="logo_form">
+                    <input type="image" src="<%=webPage.GetCurrentPath() %>/images/glass.png" align="middle" />
+                    <input type="text" id="Keyword" name="Keyword" size="30" class="keyword" />
+                    <input type="image" src="<%=webPage.GetCurrentPath() %>/images/search.jpg" align="middle" onclick="search($('#Keyword').val());return false;" />
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="nav">
+            <div class="nav_l"><img src="<%=webPage.GetCurrentPath() %>/images/nav_l.png" /></div>
+            <div class="nav_m">
+                <%=webPage.GetTopMenus("0000", "")%>
+            </div>
+            <div class="nav_r"><img src="<%=webPage.GetCurrentPath() %>/images/nav_r.png" alt=""/></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="cphMain" runat="server">
+    </asp:ContentPlaceHolder>
+    <div id="foot">
+        <div class="footer">
+            <div class="bottom-menu">
+                <%=webPage.BottomMenus %></div>
+            <div class="footinfo">
+                <%=webPage.GetConfigVal("FootInfo") %></div>
+            <div class="thirdcode">
+                <%=webPage.GetConfigVal("ThirdCode")%></div>
+        </div>
+    </div>
+    </form>
+    <asp:ContentPlaceHolder ID="cphFoot" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

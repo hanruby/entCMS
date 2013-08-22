@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/cn/Site.Master" AutoEventWireup="true" CodeBehind="NestedSite.master.cs" Inherits="entCMS.Web.cn.NestedSite" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
+    <div id="main_in">
+        <div class="main_in_l">
+            <div class="products">
+                <div id="pro"><%=webPage.TopNode.NodeName%></div>
+                <ul id="topul">
+                    <% 
+                        System.Collections.Generic.List<entCMS.Models.cmsNewsCatalog> ls = webPage.GetChildNodes();
+                        for (int i = 0; i < ls.Count; i++)
+                        {
+                            entCMS.Models.cmsNewsCatalog cat = ls[i];
+                            Response.Write("<li>" + webPage.GetNodeUrl(cat.NodeCode, true) + "</li>");
+                        }
+                    %>
+                </ul>
+            </div>
+            <div class="contact">
+                <a href="<%=webPage.GetCurrentPath() %>/Inquiry.aspx"><img src="<%=webPage.GetCurrentPath() %>/images/contact.jpg"></a> 
+                <a href="<%=webPage.GetCurrentPath() %>/Inquiry.aspx"><img src="<%=webPage.GetCurrentPath() %>/images/contact2.jpg"></a>
+                <div class="info">
+                    <span><%=webPage.Company.ComName %></span><br />
+                    地址: <%=webPage.Company.ComAddr %><br />
+                    电话: <%=webPage.Company.ComTel %><br />
+                    邮箱: <%=webPage.Company.ComEmail %><br />
+                    <br/>
+                </div>
+            </div>
+        </div>
+        <div class="main_in_r">
+            <img src="<%=webPage.GetCurrentPath() %>/images/banner_in.jpg" alt="" />
+            <asp:ContentPlaceHolder ID="cphMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear"></div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphFoot" runat="server">
+    <asp:ContentPlaceHolder ID="cphFoot" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="entCMS.HengyiLogisticsWeb.global.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:Literal ID="ltlKeyword" runat="server"></asp:Literal>
+    <asp:Literal ID="ltlDescription" runat="server"></asp:Literal>
+    <link type="text/css" rel="stylesheet" href="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/global/css/common.css")%>" />
+    <script type="text/javascript" src="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/scripts/jquery-1.9.0.min.js")%>"></script>
+    <script type="text/javascript" src="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/scripts/common.js")%>"></script>
+    <link type="text/css" rel="Stylesheet" href="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/scripts/superfish/css/superfish.css")%>" media="screen"/>
+    <style type="text/css">
+        .sf-menu{margin:0px;}
+        .sf-menu a{padding:0px 30px;height:30px;line-height:30px;color:#fff;border:0px;}
+        .sf-menu ul{min-width: 15em;*width: 15em;}
+        .sf-menu li{background-color: transparent;}
+        .sf-menu li:hover,.sf-menu li.sfHover {background: #fff;}
+        .sf-menu li:hover a,.sf-menu li.sfHover a{color:#f37021;}
+        .sf-menu li:hover a:hover,.sf-menu li.sfHover a:hover{color:#000;text-decoration:underline;}
+        .sf-menu ul li{background-color: #fff;}
+        .sf-menu ul ul li{background-color: #fff;}
+    </style>
+    <script type="text/javascript" src="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/scripts/superfish/js/hoverIntent.js")%>"></script>
+    <script type="text/javascript" src="<%=entCMS.Common.WebUtil.GetClientUrl(this.Page,"~/scripts/superfish/js/superfish.js")%>"></script>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+    (function ($) { //create closure so we can safely use $ as alias for jQuery
+        $(document).ready(function () {
+            // initialise plugin
+            var example = $('#menu').superfish({
+                //add options here if required
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+        <div id="header">
+            <a id="logo" href="/global/" title="亨一物流">亨一物流</a>
+            <p id="slogen">亚洲翘楚 • 关注中国 • 贯通全球</p>
+            <%--<ul class="topnav">
+                <li><a href="/global/" title=""><%=webPage.Resources["Home"]%></a></li>
+                <li><a href="#" title="">加入我们</a></li>
+                <li><a href="#" title="" class="topnavlasta">联系我们</a></li>
+            </ul>--%>
+            <ul class="topnav lang">
+                <%
+                    for(int i=0; i<webPage.Languages.Count; i++)
+                    {
+                        entCMS.Models.cmsLanguage lng = webPage.Languages[i];
+                        string flag = webPage.GetClientUrl("~/Images/flags/" + lng.Code + ".gif");
+                        string classname = "";
+                        if (i == webPage.Languages.Count - 1) classname = "topnavlasta";
+                        
+                %>
+                    <li><a href="<%=webPage.GetClientUrl(lng.HomeUrl)+"?lng="+lng.Code%>" class="<%=classname %>"><%=lng.ShortName%></a></li>
+                <%
+                    }
+                %>
+            </ul>
+            <div id="mainmenu">
+                <div id="nav">
+                    <%=webPage.TopMenus %>
+                </div>
+                <script type="text/javascript">
+                    
+                    function submittop() {
+                        var sa = document.getElementById("searchbar").value;
+                        sa = $.trim(sa);
+                        if (sa == '' || sa == '<%=webPage.Resources["SearchEmptyKeyword"] %>') {
+                            alert('<%=webPage.Resources["SearchEmptyKeyword"] %>');
+                            document.getElementById("searchbar").focus();
+                            return false;
+                        } else {
+                            window.location.href = '<%=webPage.GetClientUrl("~/global/Search.aspx") %>?key=' + sa;
+                        } 
+                    }
+                </script>
+                <div class="searchbar fr">
+                    <input name="searchbar" id="searchbar" class="ggsearch ggsearch1" type="text" value="<%=webPage.Resources["SearchEmptyKeyword"] %>"/>
+                    <input name="searchbtn" onclick="submittop();" id="btn_search" type="button" value="<%=webPage.Resources["SearchButtonText"] %>"/>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <asp:ContentPlaceHolder ID="cphMain" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <div id="footer">
+            <span id="footershare"></span>
+            <p><%=webPage.GetConfigVal("FootInfo") %></p>
+            <div class="topnav" style="height:auto;padding: 18px 25px 0 0; line-height: normal;">
+                <%=webPage.BottomMenus %>
+            </div>
+            <p><%=webPage.GetConfigVal("ThirdCode")%></p>
+            <!--<ul class="topnav" style="padding: 18px 25px 0 0; line-height: normal;">
+                <li><a href="/global/" title=""><%=webPage.Resources["Home"]%></a></li>
+                <li><a href="#" title="">加入我们</a></li>
+                <li><a href="#" title="" class="topnavlasta">联系我们</a></li>
+                <li><a href="#" title="">法律声明</a></li>
+                <li><a href="../main/news.jsp" title="">新闻快报</a></li>
+                <li><a href="#" title="" class="topnavlasta">网站指南</a></li>
+            </ul>-->
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="cphFoot" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿		<div class="camera_wrap">
+            <div data-src='http://livedemo00.template-help.com/wordpress_42048/wp-content/uploads/2011/07/slide-1.jpg'
+                data-link='http://livedemo00.template-help.com/wordpress_42048/vestibulum-iaculis/dolor-sit-amet-conse-ctetur-adipisicing-elit-sed-do-2/'
+                data-thumb='http://livedemo00.template-help.com/wordpress_42048/wp-content/uploads/2011/07/slide-1-96x41.jpg'>
+                <div class="camera_caption moveFromRight green" data-easing="easeOutBack">
+                    <h3>Lorem ipsum dolor sit amet conse ctetur</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="http://livedemo00.template-help.com/wordpress_42048/vestibulum-iaculis/dolor-sit-amet-conse-ctetur-adipisicing-elit-sed-do-2/">Read more</a>
+                </div>
+            </div>
+            <div data-src='http://livedemo00.template-help.com/wordpress_42048/wp-content/uploads/2011/07/slide-2.jpg'
+                data-link='http://livedemo00.template-help.com/wordpress_42048/portfolio-view/gallery-format/'
+                data-thumb='http://livedemo00.template-help.com/wordpress_42048/wp-content/uploads/2011/07/slide-2-96x41.jpg'>
+                <div class="camera_caption moveFromRight yellow" data-easing="easeOutBack">
+                    <h3>Excepteur sint occaecat cupidatat non proident</h3>
+                    <p>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. </p>
+                    <a href="http://livedemo00.template-help.com/wordpress_42048/portfolio-view/gallery-format/">Read more</a>
+                </div>
+            </div>
+            <div data-src='http://livedemo00.template-help.com/wordpress_42048/wp-content/uploads/2011/07/slide-3.jpg'
+                data-link='http://livedemo00.template-help.com/wordpress_42048/news/sit-amet-conse-ctetur-adipisicing-elit-sed-do-lorem/'
+                data-thumb='http://livedemo00.template-help.com/wordpress_42048/wp-content/uploads/2011/07/slide-3-96x41.jpg'>
+                <div class="camera_caption moveFromRight orange" data-easing="easeOutBack">
+                    <h3>Tempor incididunt ut labore et dolore magna aliqua</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="http://livedemo00.template-help.com/wordpress_42048/news/sit-amet-conse-ctetur-adipisicing-elit-sed-do-lorem/">Read more</a>
+                </div>
+            </div>
+            <div data-src='http://livedemo00.template-help.com/wordpress_42048/wp-content/uploads/2011/07/slide-4.jpg'
+                data-link='http://livedemo00.template-help.com/wordpress_42048/general/amet-conse-ctetur-adipisicing-elit/'
+                data-thumb='http://livedemo00.template-help.com/wordpress_42048/wp-content/uploads/2011/07/slide-4-96x41.jpg'>
+                <div class="camera_caption moveFromRight blue" data-easing="easeOutBack">
+                    <h3>Incididunt ut labore et dolore magna aliqua</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. </p>
+                    <a href="http://livedemo00.template-help.com/wordpress_42048/general/amet-conse-ctetur-adipisicing-elit/">Read more</a>
+                </div>
+            </div>
+        </div>

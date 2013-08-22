@@ -1,0 +1,174 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Web;
+
+namespace entCMS.Common
+{
+    public class WebUtil
+    {
+        #region 返回json数据
+        public static string WriteJson(object obj)
+        {
+            string json = LitJson.JsonMapper.ToJson(obj);
+
+            HttpContext.Current.Response.ContentType = "text/html";
+            HttpContext.Current.Response.Write(json);
+            HttpContext.Current.Response.Flush();
+            HttpContext.Current.Response.End();
+
+            return json;
+        }
+        #endregion
+
+        #region 获取浏览器可使用的URL
+        /// <summary>
+        /// 获取应用程序路径，以"\"结尾
+        /// </summary>
+        /// <returns></returns>
+        public static string GetAppPath()
+        {
+            var appPath = HttpContext.Current.Request.ApplicationPath;
+            if (!appPath.EndsWith("/"))
+            {
+                return appPath + "/";
+            }
+            else
+            {
+                return appPath;
+            }
+        }
+        /// <summary>
+        /// 获取浏览器可使用的URL
+        /// </summary>
+        /// <param name="page"></param>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static string GetClientUrl(System.Web.UI.Page page, string url)
+        {
+            if (string.IsNullOrEmpty(url)) return string.Empty;
+            url = url.ToLower();
+            if (url.StartsWith("http://"))
+            {
+                return url;
+            }
+            else if (url.StartsWith("~/"))
+            {
+                return GetAppPath() + url.Substring(2);
+            }
+            //if (HttpContext.Current != null)
+            //{
+            //    return page.ResolveClientUrl(url);
+            //}
+
+            return url;
+        }
+        #endregion
+
+        #region 获得当前绝对路径
+        /// <summary>
+        /// 获得当前绝对路径
+        /// </summary>
+        /// <param name="strPath">指定的路径</param>
+        /// <returns>绝对路径</returns>
+        public static string GetMapPath(string strPath)
+        {
+            if (strPath.ToLower().StartsWith("http://"))
+            {
+                return strPath;
+            }
+            if (HttpContext.Current != null)
+            {
+                return HttpContext.Current.Server.MapPath(strPath);
+            }
+            else //非web程序引用
+            {
+                strPath = strPath.Replace("/", "\\");
+                if (strPath.StartsWith("\\"))
+                {
+                    strPath = strPath.Substring(strPath.IndexOf('\\', 1)).TrimStart('\\');
+                }
+                return System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, strPath);
+            }
+        }
+        #endregion
+
+        #region 读写cookie
+        /// <summary>
+        /// 写cookie值
+        /// </summary>
+        /// <param name="strName">名称</param>
+        /// <param name="strValue">值</param>
+        public static void WriteCookie(string strName, string strValue)
+        {
+            HttpCookie cookie = HttpContext.Current.Request.Cookies[strName];
+            if (cookie == null)
+            {
+                cookie = new HttpCookie(strName);
+            }
+            cookie.Value = strValue;
+            HttpContext.Current.Response.AppendCookie(cookie);
+        }
+
+        /// <summary>
+        /// 写cookie值
+        /// </summary>
+        /// <param name="strName">名称</param>
+        /// <param name="strValue">值</param>
+        public static void WriteCookie(string strName, string key, string strValue)
+        {
+            HttpCookie cookie = HttpContext.Current.Request.Cookies[strName];
+            if (cookie == null)
+            {
+                cookie = new HttpCookie(strName);
+            }
+            cookie[key] = strValue;
+            HttpContext.Current.Response.AppendCookie(cookie);
+        }
+
+        /// <summary>
+        /// 写cookie值
+        /// </summary>
+        /// <param name="strName">名称</param>
+        /// <param name="strValue">值</param>
+        /// <param name="strValue">过期时间(分钟)</param>
+        public static void WriteCookie(string strName, string strValue, int expires)
+        {
+            HttpCookie cookie = HttpContext.Current.Request.Cookies[strName];
+            if (cookie == null)
+            {
+                cookie = new HttpCookie(strName);
+            }
+            cookie.Value = strValue;
+            cookie.Expires = DateTime.Now.AddMinutes(expires);
+            HttpContext.Current.Response.AppendCookie(cookie);
+        }
+
+        /// <summary>
+        /// 读cookie值
+        /// </summary>
+        /// <param name="strName">名称</param>
+        /// <returns>cookie值</returns>
+        public static string GetCookie(string strName)
+        {
+            if (HttpContext.Current.Request.Cookies != null && HttpContext.Current.Request.Cookies[strName] != null)
+                return HttpContext.Current.Request.Cookies[strName].Value.ToString();
+
+            return "";
+        }
+
+        /// <summary>
+        /// 读cookie值
+        /// </summary>
+        /// <param name="strName">名称</param>
+        /// <returns>cookie值</returns>
+        public static string GetCookie(string strName, string key)
+        {
+            if (HttpContext.Current.Request.Cookies != null && HttpContext.Current.Request.Cookies[strName] != null && HttpContext.Current.Request.Cookies[strName][key] != null)
+                return HttpContext.Current.Request.Cookies[strName][key].ToString();
+
+            return "";
+        }
+        #endregion
+    }
+}
